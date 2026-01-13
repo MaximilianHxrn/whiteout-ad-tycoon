@@ -1,0 +1,73 @@
+// Data for upgrades including cost, prerequisites and description.
+export const UPGRADES = [
+  {
+    id: 'upgradeBag1',
+    name: 'Bigger Bag',
+    description: 'Increase bag capacity by 5.',
+    cost: 20,
+    prerequisites: [],
+  },
+  {
+    id: 'upgradeSpeed',
+    name: 'Speed Boost',
+    description: 'Increase player speed by 20%.',
+    cost: 30,
+    prerequisites: [],
+  },
+  {
+    id: 'unlockTurret',
+    name: 'Turret',
+    description: 'Buy a turret to automatically kill bears and collect meat.',
+    cost: 80,
+    prerequisites: [],
+  },
+  {
+    id: 'unlockForest',
+    name: 'Forest',
+    description: 'Unlock access to the forest to harvest wood.',
+    cost: 120,
+    prerequisites: [],
+  },
+  {
+    id: 'unlockHauler',
+    name: 'Hauler Worker',
+    description: 'Hire a hauler worker to transport wood and meat.',
+    cost: 150,
+    prerequisites: ['unlockForest'],
+  },
+  {
+    id: 'unlockShopWorker',
+    name: 'Shop Worker',
+    description: 'Hire a shop worker to automate selling.',
+    cost: 200,
+    prerequisites: ['unlockHauler'],
+  },
+  {
+    id: 'unlockCookhouse',
+    name: 'Cookhouse',
+    description: 'Build a cookhouse to process meat into processed meat using wood.',
+    cost: 250,
+    prerequisites: ['unlockForest'],
+  },
+  {
+    id: 'unlockOil',
+    name: 'Oil Field',
+    description: 'Unlock the oil field to harvest crude oil.',
+    cost: 300,
+    prerequisites: ['unlockCookhouse'],
+  },
+  {
+    id: 'unlockRefinery',
+    name: 'Refinery',
+    description: 'Build a refinery to process crude oil into diesel.',
+    cost: 350,
+    prerequisites: ['unlockOil'],
+  },
+  {
+    id: 'unlockTrucks',
+    name: 'Truck Depot',
+    description: 'Build a truck depot to export processed meat for big profits.',
+    cost: 400,
+    prerequisites: ['unlockRefinery', 'unlockCookhouse'],
+  },
+];
